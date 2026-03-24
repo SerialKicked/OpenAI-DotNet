@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <Nullable>disable</Nullable>
+    <Nullable>warnings</Nullable>
     <Title>OpenAI API Proxy</Title>
     <Product>OpenAI-DotNet-Proxy</Product>
     <PackageId>OpenAI-DotNet-Proxy</PackageId>

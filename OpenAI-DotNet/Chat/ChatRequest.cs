@@ -234,7 +234,7 @@ namespace OpenAI.Chat
         /// </remarks>
         [JsonPropertyName("reasoning_effort")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public ReasoningEffort? ReasoningEffort { get; }
+        public ReasoningEffort? ReasoningEffort { get; set; }
 
         /// <summary>
         /// Developer-defined tags and values used for filtering completions in the dashboard.
@@ -461,6 +461,10 @@ namespace OpenAI.Chat
         [JsonPropertyName("user")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public string User { get; }
+
+        [JsonPropertyName("chat_template_kwargs")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        public Dictionary<string, string> chat_template_kwargs { get; set; } = null;
 
         /// <inheritdoc />
         public override string ToString() => JsonSerializer.Serialize(this, OpenAIClient.JsonSerializationOptions);

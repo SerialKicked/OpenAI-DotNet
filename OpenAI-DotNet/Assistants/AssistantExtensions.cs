@@ -69,7 +69,7 @@ namespace OpenAI.Assistants
         /// <param name="streamEventHandler">Optional, <see cref="Func{IServerSentEvent, Task}"/> stream callback handler.</param>
         /// <param name="cancellationToken">Optional, <see cref="CancellationToken"/>.</param>
         /// <returns><see cref="RunResponse"/>.</returns>
-        public static Task<RunResponse> CreateThreadAndRunAsync(this AssistantResponse assistant, CreateThreadRequest request = null, Func<IServerSentEvent, Task> streamEventHandler = null, CancellationToken cancellationToken = default)
+        public static Task<RunResponse> CreateThreadAndRunAsync(this AssistantResponse assistant, CreateThreadRequest? request = null, Func<IServerSentEvent, Task> streamEventHandler = null, CancellationToken cancellationToken = default)
         {
             var threadRunRequest = new CreateThreadAndRunRequest(
                 assistant.Id,

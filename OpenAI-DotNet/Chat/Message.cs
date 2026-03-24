@@ -63,6 +63,13 @@ namespace OpenAI.Chat
             ToolCallId = toolCall.Id;
         }
 
+        public Message(Role role, List<ToolCall> toolCalls, string content) : this(role, content)
+        {
+            ToolCalls = [.. toolCalls];
+            ToolCallId = toolCalls?.FirstOrDefault()?.Id;
+        }
+         /// <summary>
+
         [Obsolete("use overload with ToolCall")]
         public Message(Tool tool, IEnumerable<Content> content)
             : this(Role.Tool, content, tool.Function.Name)
