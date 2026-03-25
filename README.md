@@ -1,6 +1,6 @@
 # Changes
 
-This is a Llama.cpp-friendly version of OpenAI-DotNet, allowing to change kwargs directly at the chatrequest level. It also provides a missing constructor for Message(role, List<toolcalls>, content) which, without it make it practically impossible to archive and restore chatlogs accurately. Some private sets have been opened as well.
+This is a Llama.cpp-friendly version of OpenAI-DotNet, allowing to change kwargs directly at the chatrequest level. It also provides a missing constructor for Message(role, List\<toolcalls\>, content) which, without it make it practically impossible to archive and restore chatlogs accurately. Some private sets have been opened as well.
 
 # OpenAI-DotNet
 
